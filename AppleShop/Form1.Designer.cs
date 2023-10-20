@@ -40,13 +40,9 @@
             this.CreateBtn = new System.Windows.Forms.Button();
             this.TopBackPanel = new System.Windows.Forms.Panel();
             this.TopRigthPanel = new System.Windows.Forms.Panel();
-            this.DressBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.PantsBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.TShirtBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.ShoesBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.AllBrandBtn = new Guna.UI2.WinForms.Guna2Button();
             this.DashboaardLbl = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.LeftPanel.SuspendLayout();
             this.TopBackPanel.SuspendLayout();
@@ -141,6 +137,7 @@
             this.RefreshBtn.TabIndex = 2;
             this.RefreshBtn.Text = "Refresh";
             this.RefreshBtn.UseVisualStyleBackColor = false;
+            this.RefreshBtn.Click += new System.EventHandler(this.RefreshBtn_Click);
             // 
             // EditBtn
             // 
@@ -183,98 +180,13 @@
             // 
             // TopRigthPanel
             // 
-            this.TopRigthPanel.Controls.Add(this.DressBtn);
-            this.TopRigthPanel.Controls.Add(this.PantsBtn);
-            this.TopRigthPanel.Controls.Add(this.TShirtBtn);
-            this.TopRigthPanel.Controls.Add(this.ShoesBtn);
-            this.TopRigthPanel.Controls.Add(this.AllBrandBtn);
+            this.TopRigthPanel.Controls.Add(this.label1);
             this.TopRigthPanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.TopRigthPanel.Location = new System.Drawing.Point(173, 0);
             this.TopRigthPanel.Name = "TopRigthPanel";
             this.TopRigthPanel.Size = new System.Drawing.Size(835, 81);
             this.TopRigthPanel.TabIndex = 2;
             this.TopRigthPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.TopRigthPanel_Paint);
-            // 
-            // DressBtn
-            // 
-            this.DressBtn.BorderRadius = 10;
-            this.DressBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.DressBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.DressBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.DressBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.DressBtn.FillColor = System.Drawing.Color.White;
-            this.DressBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DressBtn.ForeColor = System.Drawing.Color.Black;
-            this.DressBtn.Location = new System.Drawing.Point(653, 20);
-            this.DressBtn.Name = "DressBtn";
-            this.DressBtn.Size = new System.Drawing.Size(127, 45);
-            this.DressBtn.TabIndex = 4;
-            this.DressBtn.Text = "Dress";
-            // 
-            // PantsBtn
-            // 
-            this.PantsBtn.BorderRadius = 10;
-            this.PantsBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.PantsBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.PantsBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.PantsBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.PantsBtn.FillColor = System.Drawing.Color.White;
-            this.PantsBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.PantsBtn.ForeColor = System.Drawing.Color.Black;
-            this.PantsBtn.Location = new System.Drawing.Point(504, 20);
-            this.PantsBtn.Name = "PantsBtn";
-            this.PantsBtn.Size = new System.Drawing.Size(127, 45);
-            this.PantsBtn.TabIndex = 3;
-            this.PantsBtn.Text = "Pants";
-            // 
-            // TShirtBtn
-            // 
-            this.TShirtBtn.BorderRadius = 10;
-            this.TShirtBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.TShirtBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.TShirtBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.TShirtBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.TShirtBtn.FillColor = System.Drawing.Color.White;
-            this.TShirtBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TShirtBtn.ForeColor = System.Drawing.Color.Black;
-            this.TShirtBtn.Location = new System.Drawing.Point(353, 20);
-            this.TShirtBtn.Name = "TShirtBtn";
-            this.TShirtBtn.Size = new System.Drawing.Size(127, 45);
-            this.TShirtBtn.TabIndex = 2;
-            this.TShirtBtn.Text = "T-Shirt";
-            // 
-            // ShoesBtn
-            // 
-            this.ShoesBtn.BorderRadius = 10;
-            this.ShoesBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.ShoesBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.ShoesBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.ShoesBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.ShoesBtn.FillColor = System.Drawing.Color.White;
-            this.ShoesBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ShoesBtn.ForeColor = System.Drawing.Color.Black;
-            this.ShoesBtn.Location = new System.Drawing.Point(203, 20);
-            this.ShoesBtn.Name = "ShoesBtn";
-            this.ShoesBtn.Size = new System.Drawing.Size(127, 45);
-            this.ShoesBtn.TabIndex = 1;
-            this.ShoesBtn.Text = "Shoes";
-            // 
-            // AllBrandBtn
-            // 
-            this.AllBrandBtn.BorderRadius = 10;
-            this.AllBrandBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.AllBrandBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.AllBrandBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.AllBrandBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.AllBrandBtn.FillColor = System.Drawing.Color.White;
-            this.AllBrandBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AllBrandBtn.ForeColor = System.Drawing.Color.Black;
-            this.AllBrandBtn.Location = new System.Drawing.Point(54, 20);
-            this.AllBrandBtn.Name = "AllBrandBtn";
-            this.AllBrandBtn.Size = new System.Drawing.Size(127, 45);
-            this.AllBrandBtn.TabIndex = 0;
-            this.AllBrandBtn.Text = "All brand";
-            this.AllBrandBtn.Click += new System.EventHandler(this.AllBrandBtn_Click);
             // 
             // DashboaardLbl
             // 
@@ -296,6 +208,16 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(35, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(276, 30);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Welcome to out shopping!";
+            // 
             // DashboardWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -311,6 +233,7 @@
             this.TopBackPanel.ResumeLayout(false);
             this.TopBackPanel.PerformLayout();
             this.TopRigthPanel.ResumeLayout(false);
+            this.TopRigthPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -325,17 +248,13 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel TopRigthPanel;
         private System.Windows.Forms.Label DashboaardLbl;
-        private Guna.UI2.WinForms.Guna2Button DressBtn;
-        private Guna.UI2.WinForms.Guna2Button PantsBtn;
-        private Guna.UI2.WinForms.Guna2Button TShirtBtn;
-        private Guna.UI2.WinForms.Guna2Button ShoesBtn;
-        private Guna.UI2.WinForms.Guna2Button AllBrandBtn;
         private System.Windows.Forms.Button CloseBtn;
         private System.Windows.Forms.Button AdminBtn;
         private System.Windows.Forms.Button RemoveBtn;
         private System.Windows.Forms.Button RefreshBtn;
         private System.Windows.Forms.Button EditBtn;
         private System.Windows.Forms.Button CreateBtn;
+        private System.Windows.Forms.Label label1;
     }
 }
 

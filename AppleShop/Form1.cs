@@ -60,5 +60,11 @@ namespace AppleShop
             DataUserControl userControl = new DataUserControl();
             AddUserControl(userControl);
         }
+
+        private void RefreshBtn_Click(object sender, EventArgs e)
+        {
+            DataUserControl userControl = new DataUserControl();
+            AddUserControl(userControl);
+        }
     }
 }

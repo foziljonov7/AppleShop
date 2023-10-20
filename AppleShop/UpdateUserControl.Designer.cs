@@ -30,13 +30,13 @@
         {
             this.CancelBtn = new Guna.UI2.WinForms.Guna2GradientButton();
             this.SubmitBtn = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.CategoryTxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.SizeTxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.MadeTxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.PriceTxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.NameTxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.IdTxt = new Guna.UI2.WinForms.Guna2TextBox();
+            this.CategoryCombo = new Guna.UI2.WinForms.Guna2ComboBox();
             this.SuspendLayout();
             // 
             // CancelBtn
@@ -75,28 +75,7 @@
             this.SubmitBtn.Size = new System.Drawing.Size(154, 53);
             this.SubmitBtn.TabIndex = 14;
             this.SubmitBtn.Text = "Submit";
-            // 
-            // CategoryTxt
-            // 
-            this.CategoryTxt.BorderRadius = 10;
-            this.CategoryTxt.BorderThickness = 0;
-            this.CategoryTxt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.CategoryTxt.DefaultText = "";
-            this.CategoryTxt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.CategoryTxt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.CategoryTxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.CategoryTxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.CategoryTxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.CategoryTxt.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
-            this.CategoryTxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.CategoryTxt.Location = new System.Drawing.Point(251, 389);
-            this.CategoryTxt.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.CategoryTxt.Name = "CategoryTxt";
-            this.CategoryTxt.PasswordChar = '\0';
-            this.CategoryTxt.PlaceholderText = "Category ...";
-            this.CategoryTxt.SelectedText = "";
-            this.CategoryTxt.Size = new System.Drawing.Size(333, 43);
-            this.CategoryTxt.TabIndex = 13;
+            this.SubmitBtn.Click += new System.EventHandler(this.SubmitBtn_Click);
             // 
             // SizeTxt
             // 
@@ -218,15 +197,39 @@
             this.IdTxt.Size = new System.Drawing.Size(333, 43);
             this.IdTxt.TabIndex = 16;
             // 
+            // CategoryCombo
+            // 
+            this.CategoryCombo.AutoRoundedCorners = true;
+            this.CategoryCombo.BackColor = System.Drawing.Color.Transparent;
+            this.CategoryCombo.BorderRadius = 17;
+            this.CategoryCombo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CategoryCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CategoryCombo.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CategoryCombo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CategoryCombo.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
+            this.CategoryCombo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.CategoryCombo.ItemHeight = 30;
+            this.CategoryCombo.Items.AddRange(new object[] {
+            "Gazlangan",
+            "Shakarsiz",
+            "Classic",
+            "Mineral",
+            "Sharbat",
+            "Kampot"});
+            this.CategoryCombo.Location = new System.Drawing.Point(251, 388);
+            this.CategoryCombo.Name = "CategoryCombo";
+            this.CategoryCombo.Size = new System.Drawing.Size(333, 36);
+            this.CategoryCombo.TabIndex = 17;
+            // 
             // UpdateUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.CategoryCombo);
             this.Controls.Add(this.IdTxt);
             this.Controls.Add(this.CancelBtn);
             this.Controls.Add(this.SubmitBtn);
-            this.Controls.Add(this.CategoryTxt);
             this.Controls.Add(this.SizeTxt);
             this.Controls.Add(this.MadeTxt);
             this.Controls.Add(this.PriceTxt);
@@ -234,6 +237,7 @@
             this.Controls.Add(this.label1);
             this.Name = "UpdateUserControl";
             this.Size = new System.Drawing.Size(835, 530);
+            this.Load += new System.EventHandler(this.UpdateUserControl_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -243,12 +247,12 @@
 
         private Guna.UI2.WinForms.Guna2GradientButton CancelBtn;
         private Guna.UI2.WinForms.Guna2GradientButton SubmitBtn;
-        private Guna.UI2.WinForms.Guna2TextBox CategoryTxt;
         private Guna.UI2.WinForms.Guna2TextBox SizeTxt;
         private Guna.UI2.WinForms.Guna2TextBox MadeTxt;
         private Guna.UI2.WinForms.Guna2TextBox PriceTxt;
         private Guna.UI2.WinForms.Guna2TextBox NameTxt;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2TextBox IdTxt;
+        private Guna.UI2.WinForms.Guna2ComboBox CategoryCombo;
     }
 }
