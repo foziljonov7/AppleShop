@@ -215,7 +215,8 @@
             "Classic",
             "Mineral",
             "Sharbat",
-            "Kampot"});
+            "Kampot",
+            "Energetik"});
             this.CategoryCombo.Location = new System.Drawing.Point(251, 388);
             this.CategoryCombo.Name = "CategoryCombo";
             this.CategoryCombo.Size = new System.Drawing.Size(333, 36);

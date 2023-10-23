@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.CategoryCombo = new Guna.UI2.WinForms.Guna2ComboBox();
             this.CancelBtn = new Guna.UI2.WinForms.Guna2GradientButton();
             this.SubmitBtn = new Guna.UI2.WinForms.Guna2GradientButton();
             this.SizeTxt = new Guna.UI2.WinForms.Guna2TextBox();
@@ -36,7 +37,6 @@
             this.PriceTxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.NameTxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.CategoryCombo = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,6 +55,32 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(835, 530);
             this.panel1.TabIndex = 0;
+            // 
+            // CategoryCombo
+            // 
+            this.CategoryCombo.AutoRoundedCorners = true;
+            this.CategoryCombo.BackColor = System.Drawing.Color.Transparent;
+            this.CategoryCombo.BorderRadius = 17;
+            this.CategoryCombo.BorderThickness = 0;
+            this.CategoryCombo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CategoryCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CategoryCombo.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CategoryCombo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CategoryCombo.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
+            this.CategoryCombo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.CategoryCombo.ItemHeight = 30;
+            this.CategoryCombo.Items.AddRange(new object[] {
+            "Gazlangan",
+            "Shakarsiz",
+            "Classic",
+            "Mineral",
+            "Sharbat",
+            "Kampot",
+            "Energetik"});
+            this.CategoryCombo.Location = new System.Drawing.Point(251, 353);
+            this.CategoryCombo.Name = "CategoryCombo";
+            this.CategoryCombo.Size = new System.Drawing.Size(333, 36);
+            this.CategoryCombo.TabIndex = 8;
             // 
             // CancelBtn
             // 
@@ -191,31 +217,6 @@
             this.label1.Size = new System.Drawing.Size(184, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Create window";
-            // 
-            // CategoryCombo
-            // 
-            this.CategoryCombo.AutoRoundedCorners = true;
-            this.CategoryCombo.BackColor = System.Drawing.Color.Transparent;
-            this.CategoryCombo.BorderRadius = 17;
-            this.CategoryCombo.BorderThickness = 0;
-            this.CategoryCombo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.CategoryCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CategoryCombo.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.CategoryCombo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.CategoryCombo.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
-            this.CategoryCombo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.CategoryCombo.ItemHeight = 30;
-            this.CategoryCombo.Items.AddRange(new object[] {
-            "Gazlangan",
-            "Shakarsiz",
-            "Classic",
-            "Mineral",
-            "Sharbat",
-            "Kampot"});
-            this.CategoryCombo.Location = new System.Drawing.Point(251, 353);
-            this.CategoryCombo.Name = "CategoryCombo";
-            this.CategoryCombo.Size = new System.Drawing.Size(333, 36);
-            this.CategoryCombo.TabIndex = 8;
             // 
             // CreateUserControl
             // 

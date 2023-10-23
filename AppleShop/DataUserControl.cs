@@ -59,5 +59,10 @@ namespace AppleShop
             adapter.Fill(dt);
             ProductDataGridView.DataSource = dt;
         }
+
+        private void ProductDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
